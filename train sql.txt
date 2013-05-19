@@ -1,0 +1,33 @@
+create table trainid(
+train_id varchar(10) primary key,
+start_station varchar(20) ,
+dest_station varchar(20) ,
+start_time varchar(10),
+take_time varchar(10),
+end_time varchar(10),
+seat_price smallint,	
+bed_price smallint
+)
+
+create table book(
+order_id smallint primary key unique AUTO_INCREMENT,
+train_id varchar(10),
+start_station varchar(20),
+dest_station varchar(20),
+price smallint,	
+type varchar(10),
+start_time varchar(10),
+strat_date varchar(10),
+name varchar(20)
+)AUTO_INCREMENT = 1000
+
+create table tiket(
+train_id varchar(10) primary key unique,
+strat_date varchar(10),
+seat_num smallint,	
+bed_num smallint
+)
+
+alter table book AUTO_INCREMENT=1000
+
+
